@@ -11,9 +11,9 @@ class Program
     {
         List<string> messages = new List<string> { "Every word you write today is a step toward self-discovery.", "Reflecting even for a minute today strengthens your tomorrow.", "You're doing great. Let your thoughts breathe through writing.", "Small entries lead to big insights. Keep going!", "This moment matters. Capture it." };
         Random random = new Random();
-        int index = random.Next(messages.Count);
+        int _index = random.Next(messages.Count);
 
-        Console.WriteLine($"\n✨ {messages[index]}\n");
+        Console.WriteLine($"\n✨ {messages[_index]}\n");
     }
     static void Main(string[] args)
     {
@@ -21,14 +21,14 @@ class Program
         PrintMotivationMessage();
         Journal journal = new Journal();
         Prompt prompt = new Prompt();
-        string menuResponse = "";
+        string _menuResponse = "";
 
-        while (menuResponse != "5")
+        while (_menuResponse != "5")
         {
             Console.Write("Please select one of the following choices: \n1. Write\n2. Display\n3. Load\n4. Save\n5. Quit\nWhat would you like to do? ");
-            menuResponse = Console.ReadLine();
+            _menuResponse = Console.ReadLine();
 
-            if (menuResponse == "1")
+            if (_menuResponse == "1")
             {
                 Console.Write("Title of your entry: ");
                 string title = Console.ReadLine();
@@ -44,23 +44,23 @@ class Program
 
                 journal.AddEntry(entry);
             }
-            else if (menuResponse == "2")
+            else if (_menuResponse == "2")
             {
                 journal.PrintJournal();
             }
-            else if (menuResponse == "3")
+            else if (_menuResponse == "3")
             {
                 Console.WriteLine("What is the filename? ");
                 string fileName = Console.ReadLine();
                 journal.Load(fileName);
             }
-            else if (menuResponse == "4")
+            else if (_menuResponse == "4")
             {
                 Console.WriteLine("What is the filename? ");
                 string fileName = Console.ReadLine();
                 journal.Save(fileName);
             }
-            else if (menuResponse == "5")
+            else if (_menuResponse == "5")
             {
             }
             else
