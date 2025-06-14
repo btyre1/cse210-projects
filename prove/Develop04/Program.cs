@@ -1,5 +1,5 @@
 // Exceed Requirements: Instead of just having a countdown for the breathing activity, I switched it out with a bar loading animation.
-// I also added an additional message and spinner to the breathing and relfecting activites to fill any extra time.
+// I also added an additional message and spinner to the breathing and reflecting activites to fill any extra time.
 using System;
 using System.Diagnostics;
 
