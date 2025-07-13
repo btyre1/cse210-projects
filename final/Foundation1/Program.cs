@@ -30,7 +30,7 @@ class Program
 
         foreach (Video v in videos)
         {
-            v.DisplayInfo();        
+            v.DisplayInfo();
         }
-    } 
+    }
 }
