@@ -1,4 +1,4 @@
-public class Address 
+public class Address
 {
     private string _street;
     private string _city;
@@ -11,5 +11,9 @@ public class Address
         _city = city;
         _state = state;
         _country = country;
+    }
+    public string GetFullAddress()
+    {
+        return $"{_street}\n{_city}, {_state}\n{_country}";
     }
 }
