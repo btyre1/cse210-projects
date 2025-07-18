@@ -8,14 +8,14 @@ public class Cycling : Activity
     }
     public override double GetDistance()
     {
-        return base.GetDistance();
+        return _speed * (GetMinutes() / 60.0);
     }
     public override double GetSpeed()
     {
-        return base.GetSpeed();
+        return _speed;
     }
     public override double GetPace()
     {
-        return base.GetPace();
+        return 60.0 / _speed;
     }
 }

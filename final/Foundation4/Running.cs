@@ -8,14 +8,14 @@ public class Running : Activity
     }
     public override double GetDistance()
     {
-        return base.GetDistance();
+        return _distance;
     }
     public override double GetSpeed()
     {
-        return base.GetSpeed();
+        return (_distance / GetMinutes()) * 60.0;
     }
     public override double GetPace()
     {
-        return base.GetPace();
+        return GetMinutes() / _distance;
     }
 }

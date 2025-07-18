@@ -1,4 +1,4 @@
-public class Activity
+public abstract class Activity
 {
     private string _date;
     private int _lengthInMinutes;
@@ -8,20 +8,16 @@ public class Activity
         _date = date;
         _lengthInMinutes = lengthInMinutes;
     }
-    public virtual double GetDistance()
+    public int GetMinutes()
     {
-        return 52;
+        return _lengthInMinutes;
     }
-    public virtual double GetSpeed()
-    {
-        return 52;
-    }
-    public virtual double GetPace()
-    {
-        return 52;
-    }
+    public abstract double GetDistance();
+    public abstract double GetSpeed();
+    public abstract double GetPace();
+
     public virtual string GetSummary()
     {
-        return "2";
+        return $"{_date} {this.GetType().Name} ({_lengthInMinutes} min)- Distance {GetDistance():0.0} miles, Speed {GetSpeed():0.0} mph, Pace: {GetPace():0.0} min per mile";
     }
 }

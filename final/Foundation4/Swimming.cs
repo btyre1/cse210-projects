@@ -8,14 +8,14 @@ public class Swimming : Activity
     }
     public override double GetDistance()
     {
-        return _laps * 50 / 1000 * 0.62;
+        return (_laps * 50.0 / 1000.0) * 0.62;
     }
     public override double GetSpeed()
     {
-        return base.GetSpeed();
+        return (GetDistance() / GetMinutes()) * 60.0;
     }
     public override double GetPace()
     {
-        return base.GetPace();
+        return GetMinutes() / GetDistance();
     }
 }
